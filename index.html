@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adam Abdalla Elsepiey — Creative Editor & Web Designer. Specializing in video editing, web design, branding, and visual content creation.">
+  <meta name="keywords" content="Adam Abdalla Elsepiey, Creative Editor, Web Designer, Video Editing, Graphic Design, Portfolio">
+  <meta name="author" content="Adam Abdalla Elsepiey">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Adam Abdalla Elsepiey | Creative Editor & Web Designer">
+  <meta property="og:description" content="Premium creative portfolio showcasing video editing, web design, and branding projects.">
+  <meta property="og:type" content="website">
+  <title>Adam Abdalla Elsepiey | Creative Editor & Web Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-accent">A</span>dam<span class="nav__logo-dot">.</span>
+      </a>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#services" class="nav__link" data-i18n="nav.services">Services</a></li>
+        <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#testimonials" class="nav__link" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch to Arabic" title="Switch to Arabic">ع</button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__gradient"></div>
+        <div class="hero__grid"></div>
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+      </div>
+      <div class="hero__content container">
+        <div class="hero__text reveal">
+          <p class="hero__greeting" data-i18n="hero.greeting">Hello, I'm</p>
+          <h1 class="hero__name" data-i18n-html="hero.name">Adam Abdalla <span class="text-gold">Elsepiey</span></h1>
+          <h2 class="hero__title" data-i18n="hero.title">Creative Editor & Web Designer</h2>
+          <p class="hero__intro" data-i18n="hero.intro">
+            I craft compelling visual stories and stunning digital experiences. With a passion for 
+            creativity, technical precision, and meticulous attention to detail, I transform ideas 
+            into polished content that captivates audiences and elevates brands.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary" data-i18n="hero.viewProjects">View Projects</a>
+            <a href="#contact" class="btn btn--outline" data-i18n="hero.contactMe">Contact Me</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number">5+</span>
+              <span class="hero__stat-label" data-i18n="hero.statYears">Years Experience</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">150+</span>
+              <span class="hero__stat-label" data-i18n="hero.statProjects">Projects Done</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">80+</span>
+              <span class="hero__stat-label" data-i18n="hero.statClients">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__image reveal reveal--delay">
+          <div class="hero__image-frame glass">
+            <img
+              class="hero__photo"
+              src="212.jpg"
+              alt="Adam Abdalla Elsepiey — Creative Editor & Web Designer"
+              data-i18n-alt="hero.photoAlt"
+              width="380"
+              height="475"
+              loading="eager"
+            >
+            <div class="hero__image-ring"></div>
+            <div class="hero__image-badge glass">
+              <span class="hero__badge-dot"></span>
+              <span data-i18n="hero.available">Available for Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="about.tag">About Me</span>
+          <h2 class="section__title" data-i18n-html="about.title">Crafting Digital <span class="text-gold">Excellence</span></h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__content reveal">
+            <p class="about__lead" data-i18n="about.lead">
+              I'm a creative digital professional who bridges the gap between artistry and technology, 
+              delivering exceptional results across video, web, and brand design.
+            </p>
+            <p data-i18n="about.p1">
+              With over five years of experience in the creative industry, I specialize in video editing, 
+              web design, branding, and visual content creation. My approach combines strategic thinking 
+              with artistic flair — every project is an opportunity to tell a story that resonates.
+            </p>
+            <p data-i18n="about.p2">
+              From cinematic video edits and eye-catching YouTube thumbnails to fully responsive websites 
+              and cohesive brand identities, I bring a relentless commitment to quality and a keen eye 
+              for detail to every collaboration.
+            </p>
+            <div class="about__highlights">
+              <div class="about__highlight glass">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="about.h1">Pixel-Perfect Design</span>
+              </div>
+              <div class="about__highlight glass">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="about.h2">On-Time Delivery</span>
+              </div>
+              <div class="about__highlight glass">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="about.h3">Client-Focused Approach</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__visual reveal reveal--delay">
+            <div class="about__card glass">
+              <div class="about__card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              </div>
+              <h3 data-i18n="about.card1Title">Video Editing</h3>
+              <p data-i18n="about.card1Desc">Cinematic storytelling through professional post-production</p>
+            </div>
+            <div class="about__card glass">
+              <div class="about__card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3 data-i18n="about.card2Title">Web Design</h3>
+              <p data-i18n="about.card2Desc">Modern, responsive websites that convert visitors into clients</p>
+            </div>
+            <div class="about__card glass">
+              <div class="about__card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <h3 data-i18n="about.card3Title">Branding</h3>
+              <p data-i18n="about.card3Desc">Memorable identities that stand out in crowded markets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="skills.tag">Core Skills</span>
+          <h2 class="section__title" data-i18n-html="skills.title">Tools & <span class="text-gold">Expertise</span></h2>
+        </div>
+        <div class="skills__primary reveal">
+          <h3 class="skills__subtitle" data-i18n="skills.primary">Primary Skills</h3>
+          <div class="skills__grid skills__grid--primary">
+            <article class="skill-card glass">
+              <div class="skill-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+              </div>
+              <h4 data-i18n="skills.s1Title">Video Editing</h4>
+              <p data-i18n="skills.s1Desc">Professional cuts, transitions, and cinematic storytelling</p>
+            </article>
+            <article class="skill-card glass">
+              <div class="skill-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h4 data-i18n="skills.s2Title">Web Design</h4>
+              <p data-i18n="skills.s2Desc">Stunning, user-centric websites with modern aesthetics</p>
+            </article>
+            <article class="skill-card glass">
+              <div class="skill-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <h4 data-i18n="skills.s3Title">Graphic Design</h4>
+              <p data-i18n="skills.s3Desc">Visual compositions that communicate and inspire</p>
+            </article>
+            <article class="skill-card glass">
+              <div class="skill-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h4 data-i18n="skills.s4Title">Content Creation</h4>
+              <p data-i18n="skills.s4Desc">Engaging content tailored for every platform</p>
+            </article>
+          </div>
+        </div>
+        <div class="skills__secondary reveal">
+          <h3 class="skills__subtitle" data-i18n="skills.secondary">Secondary Skills</h3>
+          <div class="skills__tags" data-i18n-tags>
+            <span class="skill-tag glass">Thumbnail Design</span>
+            <span class="skill-tag glass">Logo Design</span>
+            <span class="skill-tag glass">Responsive Web Design</span>
+            <span class="skill-tag glass">Social Media Design</span>
+            <span class="skill-tag glass">Photoshop</span>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="services.tag">Services</span>
+          <h2 class="section__title" data-i18n-html="services.title">What I <span class="text-gold">Offer</span></h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card glass reveal">
+            <div class="service-card__number">01</div>
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            </div>
+            <h3 data-i18n="services.s1Title">Professional Video Editing</h3>
+            <p data-i18n="services.s1Desc">Cinematic edits, color grading, sound design, and motion graphics for YouTube, corporate, and social media content.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__number">02</div>
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h3 data-i18n="services.s2Title">YouTube Thumbnail Design</h3>
+            <p data-i18n="services.s2Desc">Click-worthy thumbnails engineered to boost CTR and grow your channel with bold, on-brand visuals.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__number">03</div>
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 data-i18n="services.s3Title">Logo & Brand Identity Design</h3>
+            <p data-i18n="services.s3Desc">Complete brand systems including logos, color palettes, typography, and brand guidelines.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__number">04</div>
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 data-i18n="services.s4Title">Modern Website Design</h3>
+            <p data-i18n="services.s4Desc">Premium, responsive websites with stunning UI, smooth animations, and optimized performance.</p>
+          </article> 
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="projects.tag">Portfolio</span>
+          <h2 class="section__title" data-i18n-html="projects.title">Featured <span class="text-gold">Projects</span></h2>
+        </div>
+        <div class="projects__filters" role="tablist" aria-label="Project categories">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true" data-i18n="projects.filterAll">All</button>
+          <button type="button" class="filter-btn" data-filter="after" role="tab" aria-selected="false" data-i18n="projects.filterAfter">After</button>
+          <button type="button" class="filter-btn" data-filter="before-after" role="tab" aria-selected="false" data-i18n="projects.filterBeforeAfter">Before &amp; After</button>
+        </div>
+        <div class="projects__grid" id="projects-grid">
+          <article class="project-card glass reveal" data-category="after">
+            <div class="project-card__media">
+              <video class="project-card__video" src="0428.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <div class="project-card__overlay">
+                <button type="button" class="project-card__preview" data-video="0428.mp4" data-i18n="projects.livePreview">Live Preview</button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <span class="project-card__category" data-i18n="projects.afterCat">After</span>
+              <h3 data-i18n="projects.v1Title">0428 Edit</h3>
+              <p data-i18n="projects.v1Desc">Final edited version with cinematic color grading and polished transitions.</p>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="after">
+            <div class="project-card__media">
+              <video class="project-card__video" src="0530.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <div class="project-card__overlay">
+                <button type="button" class="project-card__preview" data-video="0530.mp4" data-i18n="projects.livePreview">Live Preview</button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <span class="project-card__category" data-i18n="projects.afterCat">After</span>
+              <h3 data-i18n="projects.v2Title">0530 Edit</h3>
+              <p data-i18n="projects.v2Desc">Final edited version with dynamic pacing and professional sound design.</p>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="after">
+            <div class="project-card__media">
+              <video class="project-card__video" src="short3.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <div class="project-card__overlay">
+                <button type="button" class="project-card__preview" data-video="short3.mp4" data-i18n="projects.livePreview">Live Preview</button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <span class="project-card__category" data-i18n="projects.afterCat">After</span>
+              <h3 data-i18n="projects.v3Title">Short Edit 3</h3>
+              <p data-i18n="projects.v3Desc">Short-form final cut optimized for social media engagement.</p>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="before-after">
+            <div class="project-card__media">
+              <video class="project-card__video" src="0428B,A.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <div class="project-card__overlay">
+                <button type="button" class="project-card__preview" data-video="0428B,A.mp4" data-i18n="projects.livePreview">Live Preview</button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <span class="project-card__category" data-i18n="projects.beforeAfterCat">Before &amp; After</span>
+              <h3 data-i18n="projects.v4Title">0428 Before &amp; After</h3>
+              <p data-i18n="projects.v4Desc">Side-by-side comparison showing the raw footage and the final edit.</p>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="before-after">
+            <div class="project-card__media">
+              <video class="project-card__video" src="0530B,A.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <div class="project-card__overlay">
+                <button type="button" class="project-card__preview" data-video="0530B,A.mp4" data-i18n="projects.livePreview">Live Preview</button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <span class="project-card__category" data-i18n="projects.beforeAfterCat">Before &amp; After</span>
+              <h3 data-i18n="projects.v5Title">0530 Before &amp; After</h3>
+              <p data-i18n="projects.v5Desc">Side-by-side comparison showing the raw footage and the final edit.</p>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="before-after">
+            <div class="project-card__media">
+              <video class="project-card__video" src="short3B,A.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+              <div class="project-card__overlay">
+                <button type="button" class="project-card__preview" data-video="short3B,A.mp4" data-i18n="projects.livePreview">Live Preview</button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <span class="project-card__category" data-i18n="projects.beforeAfterCat">Before &amp; After</span>
+              <h3 data-i18n="projects.v6Title">Short 3 Before &amp; After</h3>
+              <p data-i18n="projects.v6Desc">Side-by-side comparison showing the raw footage and the final edit.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="experience.tag">Experience</span>
+          <h2 class="section__title" data-i18n-html="experience.title">Achievements & <span class="text-gold">Impact</span></h2>
+        </div>
+        <div class="experience__grid">
+          <div class="stat-card glass reveal">
+            <div class="stat-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <span class="stat-card__number" data-target="1">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label" data-i18n="experience.stat1">Years of Experience</p>
+          </div>
+          <div class="stat-card glass reveal">
+            <div class="stat-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <span class="stat-card__number" data-target="10">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label" data-i18n="experience.stat2">Completed Projects</p>
+          </div>
+          <div class="stat-card glass reveal">
+            <div class="stat-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="stat-card__number" data-target="7">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label" data-i18n="experience.stat3">Satisfied Clients</p>
+          </div>
+          <div class="stat-card glass reveal">
+            <div class="stat-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="stat-card__number" data-target="8">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label" data-i18n="experience.stat4">Awards & Recognition</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="testimonials.tag">Testimonials</span>
+          <h2 class="section__title" data-i18n-html="testimonials.title">Client <span class="text-gold">Reviews</span></h2>
+        </div>
+        <div class="testimonials__slider reveal">
+          <div class="testimonials__track" id="testimonials-track">
+            <article class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote data-i18n="testimonials.t1">
+                "Adam transformed our brand video into a cinematic masterpiece. His attention to detail and creative vision exceeded every expectation. Highly recommended for any professional video project."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">SM</div>
+                <div>
+                  <strong>Sarah Mitchell</strong>
+                  <span data-i18n="testimonials.t1Role">Marketing Director, LuxeCorp</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote data-i18n="testimonials.t2">
+                "The website Adam designed for our startup is absolutely stunning. Clean, modern, and perfectly responsive. Our conversion rate increased by 40% within the first month of launch."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">JK</div>
+                <div>
+                  <strong>James Kim</strong>
+                  <span data-i18n="testimonials.t2Role">CEO, TechFlow Solutions</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote data-i18n="testimonials.t3">
+                "Working with Adam on our brand identity was a game-changer. He captured our vision perfectly and delivered a cohesive brand system that truly sets us apart from competitors."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">ER</div>
+                <div>
+                  <strong>Emily Rodriguez</strong>
+                  <span data-i18n="testimonials.t3Role">Founder, Nova Creative Studio</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote data-i18n="testimonials.t4">
+                "Adam's YouTube thumbnails consistently outperform our previous designs. His understanding of what drives clicks, combined with stunning visuals, has been invaluable for our channel growth."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">DP</div>
+                <div>
+                  <strong>David Park</strong>
+                  <span data-i18n="testimonials.t4Role">Content Creator, GameZone</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="testimonials__controls">
+            <button class="testimonials__btn" id="testimonial-prev" data-i18n-aria="testimonials.prev" aria-label="Previous testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="testimonials__dots" id="testimonials-dots"></div>
+            <button class="testimonials__btn" id="testimonial-next" data-i18n-aria="testimonials.next" aria-label="Next testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag" data-i18n="contact.tag">Contact</span>
+          <h2 class="section__title" data-i18n-html="contact.title">Let's Work <span class="text-gold">Together</span></h2>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <p class="contact__lead" data-i18n="contact.lead">
+              Have a project in mind? I'd love to hear about it. Send me a message and let's create something extraordinary together.
+            </p>
+            <div class="contact__details">
+              <div class="contact__detail glass">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <span data-i18n="contact.email">Email</span>
+                  <a href="mailto:adam2652009voda@gmail.com">adam2652009voda@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact__detail glass">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <span data-i18n="contact.phone">Phone</span>
+                  <a href="tel:+201002157715">+20 100 215 7715</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact__social">
+              <span data-i18n="contact.follow">Follow Me</span>
+              <div class="social-links">
+                <a href="https://t.me/+201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.417 15.181l-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821c.321-1.496-.541-2.081-1.514-1.714L1.588 10.37c-1.453.564-1.431 1.374-.247 1.735l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218l-10.227 9.183z"/></svg></a>
+                <a href="#" class="social-link" aria-label="YouTube"><svg xmlns="https://youtube.com/@adam3bdalla?si=dJO-fhFG5zolF06j" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--bg-primary)"/></svg></a>
+                <a href="https://wa.me/201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <form class="contact__form glass reveal reveal--delay" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" data-i18n="contact.nameLabel">Name</label>
+              <input type="text" id="name" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Your full name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="contact.emailLabel">Email</label>
+              <input type="email" id="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="your@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="subject" data-i18n="contact.subjectLabel">Subject</label>
+              <input type="text" id="subject" name="subject" data-i18n-placeholder="contact.subjectPlaceholder" placeholder="Project inquiry" required>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="contact.messageLabel">Message</label>
+              <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span data-i18n="contact.send">Send Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p class="form-success" id="form-success" hidden data-i18n="contact.success">Thank you! Your message has been sent successfully.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">
+            <span class="nav__logo-accent">A</span>dam<span class="nav__logo-dot">.</span>
+          </a>
+          <p data-i18n="footer.desc">Creative Editor & Web Designer crafting premium digital experiences that inspire and convert.</p>
+        </div>
+        <div class="footer__links">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <h4 data-i18n="footer.connect">Connect</h4>
+          <div class="social-links">
+            <a href="https://t.me/+201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.417 15.181l-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821c.321-1.496-.541-2.081-1.514-1.714L1.588 10.37c-1.453.564-1.431 1.374-.247 1.735l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218l-10.227 9.183z"/></svg></a>
+            <a href="#" class="social-link" aria-label="YouTube"><svg xmlns="https://youtube.com/@adam3bdalla?si=dJO-fhFG5zolF06j" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--bg-primary)"/></svg></a>
+            <a href="https://wa.me/201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Adam Abdalla Elsepiey. All rights reserved.</p>
+        <p data-i18n="footer.crafted">Crafted with passion & precision</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Preview Modal -->
+  <div class="video-modal" id="video-modal" hidden aria-hidden="true">
+    <div class="video-modal__backdrop" id="video-modal-backdrop"></div>
+    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+      <button type="button" class="video-modal__close" id="video-modal-close" aria-label="Close">&times;</button>
+      <h2 class="video-modal__title" id="video-modal-title"></h2>
+      <video class="video-modal__player" id="video-modal-player" controls playsinline></video>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
