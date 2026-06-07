@@ -10,11 +10,48 @@
   <meta property="og:title" content="Adam Abdalla Elsepiey | Creative Editor & Web Designer">
   <meta property="og:description" content="Premium creative portfolio showcasing video editing, web design, and branding projects.">
   <meta property="og:type" content="website">
-  <title>Adam Abdalla Elsepiey | Creative Editor & Web Designer</title>
+  <title>Adam Abdalla Elsepiey | Creative video Editor & Web Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .project-card__yt-thumb {
+      display: block;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+      background: #000;
+    }
+    .project-card__yt-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease, opacity 0.3s ease;
+    }
+    .project-card__yt-thumb:hover img {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+    .project-card__yt-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      transition: transform 0.25s ease;
+      pointer-events: none;
+    }
+    .project-card__yt-thumb:hover .project-card__yt-play {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+    .project-card__yt-play svg {
+      width: 64px;
+      height: 45px;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -46,7 +83,7 @@
       </div>
     </nav>
   </header>
-
+ 
   <main>
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -69,20 +106,6 @@
           <div class="hero__actions">
             <a href="#projects" class="btn btn--primary" data-i18n="hero.viewProjects">View Projects</a>
             <a href="#contact" class="btn btn--outline" data-i18n="hero.contactMe">Contact Me</a>
-          </div>
-          <div class="hero__stats">
-            <div class="hero__stat">
-              <span class="hero__stat-number">5+</span>
-              <span class="hero__stat-label" data-i18n="hero.statYears">Years Experience</span>
-            </div>
-            <div class="hero__stat">
-              <span class="hero__stat-number">150+</span>
-              <span class="hero__stat-label" data-i18n="hero.statProjects">Projects Done</span>
-            </div>
-            <div class="hero__stat">
-              <span class="hero__stat-number">80+</span>
-              <span class="hero__stat-label" data-i18n="hero.statClients">Happy Clients</span>
-            </div>
           </div>
         </div>
         <div class="hero__image reveal reveal--delay">
@@ -109,7 +132,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
     </section>
-
+ 
     <!-- About Section -->
     <section class="section about" id="about">
       <div class="container">
@@ -174,7 +197,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- Skills Section -->
     <section class="section skills" id="skills">
       <div class="container">
@@ -223,12 +246,12 @@
             <span class="skill-tag glass">Responsive Web Design</span>
             <span class="skill-tag glass">Social Media Design</span>
             <span class="skill-tag glass">Photoshop</span>
-
+ 
           </div>
         </div>
       </div>
     </section>
-
+ 
     <!-- Services Section -->
     <section class="section services" id="services">
       <div class="container">
@@ -270,7 +293,7 @@
             <p data-i18n="services.s4Desc">Premium, responsive websites with stunning UI, smooth animations, and optimized performance.</p>
           </article> 
     </section>
-
+ 
     <!-- Projects Section -->
     <section class="section projects" id="projects">
       <div class="container">
@@ -278,94 +301,89 @@
           <span class="section__tag" data-i18n="projects.tag">Portfolio</span>
           <h2 class="section__title" data-i18n-html="projects.title">Featured <span class="text-gold">Projects</span></h2>
         </div>
-        <div class="projects__filters" role="tablist" aria-label="Project categories">
-          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true" data-i18n="projects.filterAll">All</button>
-          <button type="button" class="filter-btn" data-filter="after" role="tab" aria-selected="false" data-i18n="projects.filterAfter">After</button>
-          <button type="button" class="filter-btn" data-filter="before-after" role="tab" aria-selected="false" data-i18n="projects.filterBeforeAfter">Before &amp; After</button>
-        </div>
         <div class="projects__grid" id="projects-grid">
-          <article class="project-card glass reveal" data-category="after">
+          <article class="project-card glass reveal" data-category="Before & After">
             <div class="project-card__media">
-              <video class="project-card__video" src="0428.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-              <div class="project-card__overlay">
-                <button type="button" class="project-card__preview" data-video="0428.mp4" data-i18n="projects.livePreview">Live Preview</button>
-              </div>
+              <a class="project-card__yt-thumb" href="https://www.youtube.com/watch?v=pI6cEvN2Ukk" target="_blank" rel="noopener noreferrer" aria-label="Watch 0428 Edit on YouTube">
+                <img src="https://img.youtube.com/vi/pI6cEvN2Ukk/hqdefault.jpg" alt="0428 Edit thumbnail" loading="lazy">
+                <span class="project-card__yt-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg></span>
+              </a>
             </div>
             <div class="project-card__content">
-              <span class="project-card__category" data-i18n="projects.afterCat">After</span>
-              <h3 data-i18n="projects.v1Title">0428 Edit</h3>
+              <span class="project-card__category" data-i18n="projects.afterCat">Before & After</span>
+              <h3 data-i18n="projects.v1Title">0428 Edit Before & After</h3>
               <p data-i18n="projects.v1Desc">Final edited version with cinematic color grading and polished transitions.</p>
             </div>
           </article>
-          <article class="project-card glass reveal" data-category="after">
+          <article class="project-card glass reveal" data-category="Before & After">
             <div class="project-card__media">
-              <video class="project-card__video" src="https://www.youtube.com/shorts/_I4UQyp1-xs" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-              <div class="project-card__overlay">
-                <button type="button" class="project-card__preview" data-video="0530.mp4" data-i18n="projects.livePreview">Live Preview</button>
-              </div>
+              <a class="project-card__yt-thumb" href="https://www.youtube.com/shorts/_I4UQyp1-xs?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Watch 0530 Edit on YouTube">
+                <img src="https://i.ytimg.com/vi/_I4UQyp1-xs/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLCKhENIQSFUNhShovZgH-_1_pY52w&usqp=CCk" alt="0530 Edit thumbnail" loading="lazy">
+                <span class="project-card__yt-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg></span>
+              </a>
             </div>
             <div class="project-card__content">
-              <span class="project-card__category" data-i18n="projects.afterCat">After</span>
-              <h3 data-i18n="projects.v2Title">0530 Edit</h3>
+              <span class="project-card__category" data-i18n="projects.afterCat">Before & After</span>
+              <h3 data-i18n="projects.v2Title">0530 Edit Before & After</h3>
               <p data-i18n="projects.v2Desc">Final edited version with dynamic pacing and professional sound design.</p>
             </div>
           </article>
           <article class="project-card glass reveal" data-category="after">
             <div class="project-card__media">
-              <video class="project-card__video" src="short3.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-              <div class="project-card__overlay">
-                <button type="button" class="project-card__preview" data-video="short3.mp4" data-i18n="projects.livePreview">Live Preview</button>
-              </div>
+              <a class="project-card__yt-thumb" href="https://www.youtube.com/shorts/N-p28GhAK4Y?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Watch Short Edit 3 on YouTube">
+                <img src="https://i.ytimg.com/vi/N-p28GhAK4Y/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLD6rze9rSDXsmLcRN9OyR4yWjP0DQ&usqp=CCk" alt="Short Edit 3 thumbnail" loading="lazy">
+                <span class="project-card__yt-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg></span>
+              </a>
             </div>
             <div class="project-card__content">
-              <span class="project-card__category" data-i18n="projects.afterCat">After</span>
-              <h3 data-i18n="projects.v3Title">Short Edit 3</h3>
+              <span class="project-card__category" data-i18n="projects.afterCat">Before & After</span>
+              <h3 data-i18n="projects.v3Title">Short 3 Before & After</h3>
               <p data-i18n="projects.v3Desc">Short-form final cut optimized for social media engagement.</p>
             </div>
           </article>
-          <article class="project-card glass reveal" data-category="before-after">
+          <article class="project-card glass reveal" data-category="after">
             <div class="project-card__media">
-              <video class="project-card__video" src="0428B,A.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-              <div class="project-card__overlay">
-                <button type="button" class="project-card__preview" data-video="0428B,A.mp4" data-i18n="projects.livePreview">Live Preview</button>
-              </div>
+              <a class="project-card__yt-thumb" href="https://www.youtube.com/shorts/QBoa2Yxuh1E?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Watch 0428 Before &amp; After on YouTube">
+                <img src="https://i.ytimg.com/vi/QBoa2Yxuh1E/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBJorYLnUv6NQ6mZQheCWF7Fu_V_g&usqp=CCk" alt="0428 Before &amp; After thumbnail" loading="lazy">
+                <span class="project-card__yt-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg></span>
+              </a>
             </div>
             <div class="project-card__content">
-              <span class="project-card__category" data-i18n="projects.beforeAfterCat">Before &amp; After</span>
-              <h3 data-i18n="projects.v4Title">0428 Before &amp; After</h3>
+              <span class="project-card__category" data-i18n="projects.beforeAfterCat"> After</span>
+              <h3 data-i18n="projects.v4Title">0428 After</h3>
               <p data-i18n="projects.v4Desc">Side-by-side comparison showing the raw footage and the final edit.</p>
             </div>
           </article>
-          <article class="project-card glass reveal" data-category="before-after">
+          <article class="project-card glass reveal" data-category="after">
             <div class="project-card__media">
-              <video class="project-card__video" src="0530B,A.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-              <div class="project-card__overlay">
-                <button type="button" class="project-card__preview" data-video="0530B,A.mp4" data-i18n="projects.livePreview">Live Preview</button>
-              </div>
+              <a class="project-card__yt-thumb" href="https://www.youtube.com/shorts/EUtiQp5Py5I?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Watch 0530 Before &amp; After on YouTube">
+                <img src="https://i.ytimg.com/vi/EUtiQp5Py5I/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBCjlguANWiAdeon4TyFLACyvkJxQ&usqp=CCk" alt="0530 After thumbnail" loading="lazy">
+                <span class="project-card__yt-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg></span>
+              </a>
             </div>
             <div class="project-card__content">
-              <span class="project-card__category" data-i18n="projects.beforeAfterCat">Before &amp; After</span>
-              <h3 data-i18n="projects.v5Title">0530 Before &amp; After</h3>
+              <span class="project-card__category" data-i18n="projects.beforeAfterCat"> After</span>
+              <h3 data-i18n="projects.v5Title">0530 After</h3>
               <p data-i18n="projects.v5Desc">Side-by-side comparison showing the raw footage and the final edit.</p>
             </div>
           </article>
           <article class="project-card glass reveal" data-category="before-after">
             <div class="project-card__media">
-              <video class="project-card__video" src="short3B,A.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-              <div class="project-card__overlay">
-                <button type="button" class="project-card__preview" data-video="short3B,A.mp4" data-i18n="projects.livePreview">Live Preview</button>
-              </div>
+              <a class="project-card__yt-thumb" href="https://www.youtube.com/shorts/oywesSYDp4I?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Watch Short 3 Before &amp; After on YouTube">
+                <img src="https://i.ytimg.com/vi/oywesSYDp4I/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLCU25Srxj_cbxu8bwwyQmXjE7PVCA&usqp=CCk" alt="Short 3 Before &amp; After thumbnail" loading="lazy">
+                <span class="project-card__yt-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg></span>
+              </a>
             </div>
             <div class="project-card__content">
-              <span class="project-card__category" data-i18n="projects.beforeAfterCat">Before &amp; After</span>
-              <h3 data-i18n="projects.v6Title">Short 3 Before &amp; After</h3>
+              <span class="project-card__category" data-i18n="projects.beforeAfterCat">After</span>
+              <h3 data-i18n="projects.v6Title">Short 3 After</h3>
               <p data-i18n="projects.v6Desc">Side-by-side comparison showing the raw footage and the final edit.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
-
+ 
     <!-- Experience Section -->
     <section class="section experience" id="experience">
       <div class="container">
@@ -409,7 +427,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- Testimonials Section -->
     <section class="section testimonials" id="testimonials">
       <div class="container">
@@ -484,7 +502,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- Contact Section -->
     <section class="section contact" id="contact">
       <div class="container">
@@ -517,7 +535,6 @@
               <span data-i18n="contact.follow">Follow Me</span>
               <div class="social-links">
                 <a href="https://t.me/+201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.417 15.181l-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821c.321-1.496-.541-2.081-1.514-1.714L1.588 10.37c-1.453.564-1.431 1.374-.247 1.735l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218l-10.227 9.183z"/></svg></a>
-                <a href="#" class="social-link" aria-label="YouTube"><svg xmlns="https://youtube.com/@adam3bdalla?si=dJO-fhFG5zolF06j" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--bg-primary)"/></svg></a>
                 <a href="https://wa.me/201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
               </div>
             </div>
@@ -549,7 +566,7 @@
       </div>
     </section>
   </main>
-
+ 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -574,7 +591,6 @@
           <h4 data-i18n="footer.connect">Connect</h4>
           <div class="social-links">
             <a href="https://t.me/+201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.417 15.181l-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821c.321-1.496-.541-2.081-1.514-1.714L1.588 10.37c-1.453.564-1.431 1.374-.247 1.735l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218l-10.227 9.183z"/></svg></a>
-            <a href="#" class="social-link" aria-label="YouTube"><svg xmlns="https://youtube.com/@adam3bdalla?si=dJO-fhFG5zolF06j" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--bg-primary)"/></svg></a>
             <a href="https://wa.me/201002157715" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
           </div>
         </div>
@@ -585,7 +601,7 @@
       </div>
     </div>
   </footer>
-
+ 
   <!-- Video Preview Modal -->
   <div class="video-modal" id="video-modal" hidden aria-hidden="true">
     <div class="video-modal__backdrop" id="video-modal-backdrop"></div>
@@ -595,7 +611,7 @@
       <video class="video-modal__player" id="video-modal-player" controls playsinline></video>
     </div>
   </div>
-
+ 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
